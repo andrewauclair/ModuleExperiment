@@ -7,3 +7,8 @@ Library::Test::Test(int value) : value(value)
 {
 	std::cout << value << '\n';
 }
+
+int Library::Test::complex_calculation() const
+{
+	return value * 100;
+}

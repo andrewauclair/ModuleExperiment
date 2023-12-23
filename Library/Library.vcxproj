@@ -95,7 +95,7 @@
     <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">
-    <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -190,6 +190,8 @@
     <ClCompile Include="Library.ixx">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Headers_Static|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Headers_Dynamic|x64'">true</ExcludedFromBuild>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">CompileAsCppModule</CompileAs>
+      <ModuleOutputFile Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">$(SolutionDir)$(Platform)\Release_Modules_Dynamic\Library.ixx.ifc</ModuleOutputFile>
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

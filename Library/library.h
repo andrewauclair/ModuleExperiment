@@ -20,7 +20,10 @@ namespace Library
 
 		int getValue() const;
 
+		int complex_calculation() const;
+
 		static const int static_value;
+		//inline static const int static_value = 5;
 	private:
 		int value;
 	};
