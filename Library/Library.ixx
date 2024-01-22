@@ -6,4 +6,6 @@ module;
 
 export module Library;
 
+extern "C++" {
 #include "library.h"
+}

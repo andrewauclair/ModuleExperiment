@@ -187,7 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="library.cpp">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">CompileAsCppModule</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">CompileAsCpp</CompileAs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Library.ixx">
