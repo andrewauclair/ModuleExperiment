@@ -1,6 +1,10 @@
 #ifndef LIBRARY_H
 #define LIBRARY_H
 
+#ifndef EXPORT_
+#define EXPORT_
+#endif
+
 #if defined(Library_DLL)
 	#if defined(Library_EXPORTS)
 		#define LIBRARY_API __declspec(dllexport)
@@ -11,9 +15,9 @@
 #define LIBRARY_API
 #endif
 
-namespace Library
+EXPORT_ namespace Library
 {
-	class LIBRARY_API Test
+	EXPORT_ class LIBRARY_API Test
 	{
 	public:
 		Test(int value);

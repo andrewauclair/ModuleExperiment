@@ -2,11 +2,8 @@ module;
 
 #undef Library_EXPORTS
 
-#include "library.h"
+#define EXPORT_ export
 
 export module Library;
 
-export namespace Library
-{
-	export using Library::Test;
-}
+#include "library.h"

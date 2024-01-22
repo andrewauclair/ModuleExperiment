@@ -116,7 +116,7 @@
     <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|x64'">
-    <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
+    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
     <OutDir>$(SolutionDir)$(Platform)\Release_Modules_Dynamic\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -249,8 +249,7 @@
       <BuildStlModules>true</BuildStlModules>
       <AdditionalIncludeDirectories>../Library;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
-      <AdditionalBMIDirectories>
-      </AdditionalBMIDirectories>
+      <AdditionalBMIDirectories>$(SolutionDir)$(Platform)\Release_Modules_Dynamic</AdditionalBMIDirectories>
       <AdditionalModuleDependencies>Library=$(SolutionDir)$(Platform)\Release_Modules_Dynamic\Library.ixx.ifc;%(AdditionalModuleDependencies)</AdditionalModuleDependencies>
     </ClCompile>
     <Link>
@@ -260,6 +259,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\Release_Modules_Dynamic\</AdditionalLibraryDirectories>
       <AdditionalDependencies>Library.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

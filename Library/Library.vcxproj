@@ -186,7 +186,10 @@
     <ClInclude Include="library.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="library.cpp" />
+    <ClCompile Include="library.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">CompileAsCppModule</CompileAs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Library.ixx">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Headers_Static|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Headers_Dynamic|x64'">true</ExcludedFromBuild>
