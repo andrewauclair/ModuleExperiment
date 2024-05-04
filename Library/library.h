@@ -26,6 +26,9 @@ EXPORT_ namespace Library
 
 		int complex_calculation() const;
 
+		void change_internal_value();
+		int internal_value();
+
 		static const int static_value;
 		//inline static const int static_value = 5;
 	private:

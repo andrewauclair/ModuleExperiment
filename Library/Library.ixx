@@ -1,7 +1,9 @@
 module;
 
 #define EXPORT_ export
+#define BUILDING_MODULE
 
 export module Library;
 
-#include "library.cpp"
+export import :Main;
+export import :Second;

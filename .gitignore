@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/cmake-modules
+/PocoTest/build-gcc
+/PocoTest/build-msvc

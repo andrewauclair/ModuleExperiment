@@ -18,12 +18,24 @@
     <ClInclude Include="library.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="second.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="library.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Library.ixx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="second.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LibraryMain.ixx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Second.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

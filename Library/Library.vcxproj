@@ -184,6 +184,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="library.h" />
+    <ClInclude Include="second.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="library.cpp">
@@ -195,6 +196,13 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_Headers_Dynamic|x64'">true</ExcludedFromBuild>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">CompileAsCppModule</CompileAs>
       <ModuleOutputFile Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">$(SolutionDir)$(Platform)\Release_Modules_Dynamic\Library.ixx.ifc</ModuleOutputFile>
+    </ClCompile>
+    <ClCompile Include="LibraryMain.ixx">
+      <ModuleOutputFile Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">$(SolutionDir)$(Platform)\Release_Modules_Dynamic\LibraryMain.ixx.ifc</ModuleOutputFile>
+    </ClCompile>
+    <ClCompile Include="second.cpp" />
+    <ClCompile Include="Second.ixx">
+      <ModuleOutputFile Condition="'$(Configuration)|$(Platform)'=='Release_Modules_Dynamic|x64'">$(SolutionDir)$(Platform)\Release_Modules_Dynamic\LibrarySecondary.ixx.ifc</ModuleOutputFile>
     </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

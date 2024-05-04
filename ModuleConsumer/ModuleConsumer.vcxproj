@@ -116,8 +116,8 @@
     <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|x64'">
-    <AllProjectBMIsArePublic>false</AllProjectBMIsArePublic>
-    <OutDir>$(SolutionDir)$(Platform)\Release_Modules_Dynamic\</OutDir>
+    <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -247,10 +247,14 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <BuildStlModules>true</BuildStlModules>
-      <AdditionalIncludeDirectories>../Library;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
-      <AdditionalBMIDirectories>$(SolutionDir)$(Platform)\Release_Modules_Dynamic</AdditionalBMIDirectories>
-      <AdditionalModuleDependencies>Library=$(SolutionDir)$(Platform)\Release_Modules_Dynamic\Library.ixx.ifc;%(AdditionalModuleDependencies)</AdditionalModuleDependencies>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <ScanSourceForModuleDependencies>
+      </ScanSourceForModuleDependencies>
+      <AdditionalBMIDirectories>
+      </AdditionalBMIDirectories>
+      <AdditionalModuleDependencies>
+      </AdditionalModuleDependencies>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

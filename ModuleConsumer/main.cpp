@@ -4,6 +4,13 @@ import Library;
 int main()
 {
 	auto test = Library::Test(Library::Test::static_value);
+	auto secondTest = Second::SecondTest(Second::SecondTest::static_value);
+	
+	std::cout << test.internal_value() << ' ' << secondTest.internal_value();
 
-	std::cout << test.complex_calculation();
+	test.change_internal_value();
+	secondTest.change_internal_value();
+
+	std::cout << '\n';
+	std::cout << test.internal_value() << ' ' << secondTest.internal_value();
 }
