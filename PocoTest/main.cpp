@@ -1,12 +1,12 @@
 #include <iostream>
 
-//import PocoFoundation;
+import poco.foundation;
 
 int main()
 {
-	// std::cout << "Hello World\n";
+	std::cout << "Hello World\n";
 	
-	// Poco::Timespan time;
+	Poco::Timestamp time;
 	
-	// std::cout << "days: " << time.days();
+	std::cout << "time: " << time.raw();
 }
